@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@app/*": ["apps/*"],
+      "@app/help/manifest": ["apps/my-app/src/help/manifest.ts"],
+      "@lib/*": ["my-lib/src/*"],
+      "@lib/help-files": ["my-lib/src/help/help-files/lib-help.ts"],
+      "@lib/help/manifest": ["my-lib/src/help/manifest.ts"],
+      "@my-workspace/my-lib": ["my-lib/src/index.ts"],
+      "@components": [
+        "apps/my-app/src/app/components/index.ts",
+        "my-lib/src/index.ts"
+      ]
+    },
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "exclude": ["node_modules", "tmp"],
+  "include": ["apps/**/*", "my-lib/**/*"]
+}
